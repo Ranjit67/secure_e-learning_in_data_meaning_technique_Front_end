@@ -22,60 +22,252 @@
       opacity: 0;
       border-radius: 10px;
        box-shadow: -30px 30px 20px rgba(0, 0, 0,0.3);
+       overflow: hidden;
       
     }
 
+    .price{
+      align-items: center;
+      margin-top: 0;
+      margin-left: 2px;
+      margin-bottom: 2px;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+    }
+    .nameCourse{
+      margin-left: 1px;
+      margin-right: 1px;
+      width: 100%;
+     
+    text-align: center;
+    font-size: 15px;
+    }
+   
 
-  .imageContChange{
-    animation: imageChanger 0.5s ease-in both;
-  }
-  @keyframes imageChanger{
-    from{
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+
+
+
+
+
+
+
+
+
+/* laptop view */
+@media 
+  (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {   
+
+    .imageContChange{
+      animation: imageChanger 0.5s ease-in both;
     }
-    to{
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+    @keyframes imageChanger{
+      from{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      to{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
     }
-  }
+    
   
- 
-
-  .tempMouseOver{
-    animation: s 0.5s ease-in forwards;
-  }
- @keyframes s{
-   from{transform: scale(1);
-    box-shadow: 0;
-  }
-   to{transform: scale(1.3);
-    box-shadow: -30px 30px 20px rgba(0, 0, 0,0.3);
-  }
- }
-
-  .contDisplay{
-    animation: moveCont 0.5s ease-in both;
-  }
-  @keyframes moveCont{
-    from{transform: translateY(0);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  opacity: 0;
+    .tempMouseOver{
+      animation: s 0.5s ease-in forwards;
     }
-    to{transform: translateY(140px);
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-     opacity: 1;
+   @keyframes s{
+     from{transform: scale(1);
+      box-shadow: 0;
     }
+     to{transform: scale(1.3);
+      box-shadow: -30px 30px 20px rgba(0, 0, 0,0.3);
+    }
+   }
+  
+    .contDisplay{
+      animation: moveCont 0.5s ease-in both;
+    }
+    @keyframes moveCont{
+      from{transform: translateY(0);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    opacity: 0;
+      }
+      to{transform: translateY(140px);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+       opacity: 1;
+      }
+    }
+  
+
   }
+
+
+
+
+
+
+
 
 
  /* tablet view point */
  @media 
  (min-device-width: 768px) 
  and (max-device-width: 1280px) {  
+  .thomnel{
+    display:inline-flex;
+    margin: 0 35px 25px 0;
+      
+    }
 
+    .thomnelImage{
+       
+      background-color: red;
+      box-sizing: border-box;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+      
+    }
+  .thamnailCont{
+    position: relative;
+   border-top-left-radius: 0px;
+   border-bottom-left-radius: 0px;
+
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   
+    background-color: white;
+    opacity: 1;
+    
+    box-shadow: none;
+
+  }
+  .thamnailCont, .thomnelImage{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .nameCourse{
+    max-height: 100px;
+    height: 60px;
+    width: 100px;
+    /* margin: 3px; */
+  overflow: hidden;
+  text-align: center;
+  font-size: 10px;
+  }
+  /* .nameCourse p{
+   
+    
+  } */
+  .price{
+    align-items: center;
+    margin-top: 0;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+  }
   
  }
+
+
+
+
+
+
+
+
+
+
+ /* mobile view */
+@media 
+(min-device-width: 360px) 
+and (max-device-width: 640px) { 
+
+  .thomnel{
+    display:flex;
+    margin: 0 25px 5px 0;
+    width: 340px; 
+    }
+
+    .thomnelImage{
+       
+      background-color: red;
+      box-sizing: border-box;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+      
+    }
+  .thamnailCont{
+    position: relative;
+   border-top-left-radius: 0px;
+   border-bottom-left-radius: 0px;
+
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   
+    background-color: white;
+    opacity: 1;
+    
+    box-shadow: none;
+    overflow: hidden;
+
+  }
+  .thomnelImage{
+    width: 100px;
+    height: 80px;
+  }
+  .thamnailCont{
+    width: 100%;
+    height: 80px;
+  }
+
+
+
+
+
+  .nameCourse{
+   
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    /* margin: 3px; */
+  overflow: hidden;
+ margin-left: 10px;
+ margin-right: 10px;
+  font-size: 10px;
+ 
+ 
+  }
+  /* .nameCourse p{
+   
+    
+  } */
+  .price{
+    align-items: center;
+    margin-top: 0;
+ padding: 1px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+  }
+
+
+
+
+  
+}
    

@@ -11,20 +11,47 @@ import Axcious from "../../hoc/Axcious";
 class Navbar extends Component{
     state={
         inputBoolean:false,
-        homeMenuBoolean:false
+        homeMenuBoolean:false,
+        avatarOverMouse:false,
+        fixAvatarModal:false
     }
     inputBooleanHandler = ()=>{
         this.setState({
-            inputBoolean: true
+            inputBoolean: true,
+            
         });
     }
     homeMenuHandler = ()=>{
        
             this.setState({
                 homeMenuBoolean: !this.state.homeMenuBoolean
+            });  
+    }
+
+    avatarHandler=()=>{
+        this.setState({
+            avatarOverMouse: true
+        });  
+    }
+    avatarOuter= ()=>{
+       
+            this.setState({
+                avatarOverMouse: false
             }); 
        
-        
+            
+  
+    }
+
+    coseEvent=()=>{
+        this.setState({
+            fixAvatarModal: false
+        }); 
+    }
+    clickFixedModal =()=>{
+        this.setState({
+            fixAvatarModal: !this.state.fixAvatarModal
+        }); 
     }
     render(){
         let Dehazetempclassmanager = ["navDhaze"];
@@ -62,6 +89,23 @@ class Navbar extends Component{
         <div className="About">COURSE</div>
 
 
+                {/* avatar controler only desktop */}
+        {(this.state.avatarOverMouse || this.state.fixAvatarModal)? <div
+        onMouseOver={this.avatarHandler}
+        onClick={this.clickFixedModal}
+        ><Tabbox
+         
+        clas="avatarmodal"
+                /></div> : null}
+
+                {/* {this.state.fixAvatarModal ?<Tabclose
+                clas="avatarClosemodal"
+                closeEvent={this.coseEvent}
+                /> : null } */}
+
+        
+
+
                 <div className="cartAvatar">
 
                 <Bcart 
@@ -69,11 +113,16 @@ class Navbar extends Component{
                     clas="cartIco"
                     />
                  
-                
+                <div 
+                onMouseOver={this.avatarHandler}
+                onMouseOut={this.avatarOuter}
+                onClick={this.clickFixedModal}
+                >
                 <Avatar
                 clas="navbarAvatar"
                 image="https://m.media-amazon.com/images/I/91LlO1g8ArL._SS500_.jpg"
-                />
+                /></div>
+               
                     </div>
 
        <House className={Housetempclassmanger.join(" ")}
@@ -91,6 +140,7 @@ class Navbar extends Component{
             onClick={this.inputBooleanHandler}
             placeholder="Search"
             type="text" name="search" />
+            
             {this.state.inputBoolean ? <button className="navbarSearch">search</button> : null }
             
             

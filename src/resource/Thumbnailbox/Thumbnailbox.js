@@ -27,7 +27,12 @@ let imageContClas=null;
             </div>
 
             <div className={"thamnailCont "+manageClassContent} >
-                <p>Props.cont</p>
+                <div className="nameCourse">
+                   <p>Props.course.name</p>
+                   <p>Props.course.namedhfgdshgdhgfsdhg</p>
+                   </div>
+                
+                <div className="price"><p>price:12000</p></div> 
                 </div>
         
          </div>

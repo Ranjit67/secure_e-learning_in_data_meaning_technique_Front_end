@@ -107,9 +107,28 @@ box-sizing: border-box;
       margin-top: 12px;
       
     }
-    /* .budger{
-      margin-top: 30px;
-    }  */
+    
+    /* Laptop Avatar modal */
+    .avatarmodal{
+      top: 92%;
+      right: 1%;
+      background-color: white;
+     position: absolute;
+      width: 200px;
+      height: 250px;
+      /* z-index: 400; */
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .avatarClosemodal{
+      /* background-color: transparent; */
+      /* opacity: 0.2; */
+    
+      width: 100%;
+      height:3500%;
+     
+    }
    
 
 }
@@ -122,10 +141,7 @@ box-sizing: border-box;
   and (max-device-width: 1280px) {      
     .Navbar{
               height: 60px;
-              
     }
-
-    
 
     .Home, .About,.cartAvatar{
       visibility: hidden;
@@ -134,16 +150,27 @@ box-sizing: border-box;
     width: 0;
     height: 0;
   }
+  .navHouse{
+    opacity: 0;
+  }
+
+
+
   .navbarsearchcont{
     left: 25%;
     position: absolute;
   }
-  .navHouse{
-    opacity: 0;
-  }
+ 
   .navbarSearch{
     margin-left: 10px;
   }
+
+
+
+
+
+
+
 
  /* Manubar animation */
  .navDhazetemp{
@@ -179,7 +206,7 @@ box-sizing: border-box;
     
   }
 
-  /* for mobile model */
+  /* for tablet model */
 /* modal */
 .navmodal{
   top: 100%;
@@ -214,6 +241,24 @@ box-sizing: border-box;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* mobile view */
 @media 
   (min-device-width: 320px) 
@@ -238,14 +283,44 @@ box-sizing: border-box;
     .navbarInput{
       width: 60%;
     }
+    .navbarSearch{
+      margin-left: 10px;
+
+    }
+
+
+
+
     .navbarsearchcont{
       left: 25%;
     position: absolute;
     }
+
+      /* input searcbutton animation */
+      .tempSearchCont{
+        animation: tempSearchButton 1s ease-in both;
+      }
+  @keyframes tempSearchButton {
+    from{transform: translateX(0);}
+    to{transform: translateX(-30px);}
     
-    .navbarSearch{
-      margin-left: 10px;
-    }
+  }
+
+
+/* button */
+   .navbarSearch {
+    animation:navsearchButtonanimate 1s ease-in both ;
+  }
+  @keyframes navsearchButtonanimate {
+    0%{ transform: translateX(-120px);}
+    50%{transform: translateX(-60px);}
+    100%{transform: translateX(0);}
+    
+  }
+
+   
+    
+  
 
     /* Manubar animation */
     .navDhazetemp{
@@ -272,25 +347,7 @@ box-sizing: border-box;
 
 
 
-   /* input searcbutton animation */
-   .navbarSearch {
-    animation:navsearchButtonanimate 1s ease-in forwards ;
-  }
-  @keyframes navsearchButtonanimate {
-    0%{ transform: translateX(-120px);}
-    50%{transform: translateX(-60px);}
-    100%{transform: translateX(0);}
-    
-  }
-
-    .tempSearchCont{
-      animation: tempSearchButton 1s ease-in forwards;
-    }
-@keyframes tempSearchButton {
-  from{transform: translateX(0);}
-  to{transform: translateX(-18%);}
-  
-}
+ 
 
 /* for mobile model */
 /* modal */
