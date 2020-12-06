@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Yellowtail&display=swap');
 
 .v{
-    /* height: 100%;
-    width: 90%; */
+  
+    margin-top: 70px;
     height: 650px;
     width: 100%;
-    /* background-color: red; */
+   
     position: relative;
-    /* position: fixed; */
+   
     top: 30%;
     left: 0;
     overflow: hidden;

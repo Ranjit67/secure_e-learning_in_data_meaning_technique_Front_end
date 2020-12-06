@@ -7,3 +7,16 @@
     align-items: center;
 }
 
+/* laptop view */
+@media 
+  (min-device-width: 1200px) 
+  and (max-device-width: 1600px) { 
+    .Signin{
+        position: fixed;
+        height: 700px;
+        width: 100%;
+
+    }
+
+    }
+
