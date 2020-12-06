@@ -1,0 +1,96 @@
+.Logo{
+    /* height: 400px;
+    width: 400px; */
+    height: 40%;
+    width: 50%;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #22C7CD;
+}
+.learner{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    font-size: 35px;
+    transform: 3s;
+    animation: lern linear 2s forwards;
+}
+@keyframes lern{
+    0%{transform: translateX(-500px);
+    opacity: 0;
+    }
+    50%{transform: translateX(40px);
+        opacity: 0.5;
+    }
+    70%{transform: translateX(10px);
+        opacity: 1;
+    }
+    100%{transform: translateX(0);
+        opacity: 1;
+    }
+}
+.dot{
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    font-size: 35px;
+    animation: dotani linear 2s forwards;
+}
+@keyframes dotani{
+    0%{transform: translateX(900px);
+    opacity: 0;
+    }
+    50%{transform: translateX(-40px);
+        opacity: 0.5;
+    }
+    70%{transform: translateX(-10px);
+        opacity: 1;
+    }
+    100%{transform: translateX(0);
+        opacity: 1;
+    }
+}
+.L{
+background-color: rgb(0, 0, 0);
+height: 10%;
+color:#22C7CD ;
+padding-left: 5%;
+opacity: 0;
+
+animation: lanim linear 3s forwards 2s;
+}
+@keyframes lanim {
+    0%{opacity:0;}
+    50%{opacity:0.5;}
+    100%{opacity:1;}
+}
+
+.D{
+    background-color: rgb(0, 0, 0);
+    height: 10%;
+    color:white ;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    opacity: 0;
+    animation: lanim linear 3s forwards 2s;
+}
+
+
+
+
+/* mobile view */
+@media 
+  (min-device-width: 320px) 
+  and (max-device-width: 648px) {      
+
+    .dot{
+        margin: 27% 0 0 15%;
+        font-size:200%;
+    }
+
+    .learner{
+        
+        font-size:200%;
+     
+    }
+}

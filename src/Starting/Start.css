@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Yellowtail&display=swap');
+
+.v{
+    /* height: 100%;
+    width: 90%; */
+    height: 650px;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    /* position: fixed; */
+    top: 30%;
+    left: 0;
+    overflow: hidden;
+}
+
+
+.vcard{
+    width: 100%;
+    height: auto;
+   
+    z-index: -1;
+    margin: 0;
+  } 
+  .back{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+  }
+  
+  .heading{
+color:#0ae8f0 ;
+font-family: 'Yellowtail', cursive;
+text-shadow:4px 4px 8px rgb(161, 224, 224);
+font-size: 120px;
+opacity: 0.7;
+  }
+  .start{
+      border: none;
+      background-color: #22c7cd;
+      color: white;
+      border-radius: 5px;
+      width: 160px;
+      height: 90px;
+      position: absolute;
+      bottom:25%;
+      font-size: 30px;
+  }
+  .start:hover{
+    box-shadow: #a3d5d6;
+    width: 170px;
+      height: 95px;
+      font-size: 32px;
+    
+  }
+  .start:focus{
+    outline: none;
+    background-color: azure;
+    color: #a3d5d6;
+    text-shadow: #78e2e6;
+  }
+ 
+
+
+
+  /* grid */
+  /* .grid{
+    background-color: red;
+  }
+  .leftgrid{
+    background-color: blue;
+  }
+  .rightgrid{
+    background-color: gray;
+  } */

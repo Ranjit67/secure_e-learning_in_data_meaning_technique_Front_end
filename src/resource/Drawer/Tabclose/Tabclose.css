@@ -1,0 +1,10 @@
+.closeModel{
+ 
+    background-color: black;
+    opacity: 0.2;
+   position: absolute;
+  
+    z-index: 250;
+  }
+
+  /* it always stay under relative position */

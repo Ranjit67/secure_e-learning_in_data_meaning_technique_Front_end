@@ -1,0 +1,58 @@
+
+
+.model{
+    
+    background-color: white;
+   position: absolute;
+   
+    z-index: 300;
+  }
+
+   /* it always stay under relative position */
+
+
+
+
+
+   .boxElement{
+  
+    color: black;
+   }
+
+   /* laptop view */
+@media 
+(min-device-width: 1200px) 
+and (max-device-width: 1600px) { 
+
+}
+
+
+
+
+
+ /* tablet */
+   @media 
+  (min-device-width: 768px) 
+  and (max-device-width: 1280px) {  
+      .boxElement{
+        margin: 13% 0 0 20%;
+        font-size: 220%;
+      }
+
+  }
+
+
+
+
+
+   /* mobile view */
+@media 
+(min-device-width: 320px) 
+and (max-device-width: 648px) { 
+
+    .boxElement{
+        margin: 10% 0 0 15%;
+        font-size: 120%;
+    }
+
+}

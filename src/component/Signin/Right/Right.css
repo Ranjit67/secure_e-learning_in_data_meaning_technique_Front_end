@@ -1,0 +1,138 @@
+.right,.fup,.sinf{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(126, 214, 223,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+.signinButton{
+   background-color: #6D214F;
+    box-shadow: 0 0 10px #d867ab, 0 0 40px #d867ab, 0 0 80px #d867ab;
+   color: #32ff7e;
+  margin: 2%;
+  font-size: 120%;
+  height: 9.1%;
+  width: 27%;
+}
+.signinButton:hover, .signinButton:active {
+    background-color: #d47eb2;
+}
+.createSignup {
+    background-color: #0cf160;
+    box-shadow: 0 0 10px #6fc990, 0 0 40px #6fc990, 0 0 80px #6fc990;
+   color: #6D214F;
+   margin-left: 7%;
+   height: 80%;
+   width: 30%;
+   font-size: 90%;
+}
+.createSignup:active{
+    background-color:#50b374;
+}
+.headsignin{
+    color: #6D214F;
+    text-decoration: underline;
+    font-family: 'Castoro', serif;
+}
+.forget{
+    margin-top: 0;
+    margin-left: 40%;
+    left: 90%;
+   font-size: 15px;
+   color: #3246ff;
+}
+.social{
+    
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    
+    margin: 3%;
+}
+.create{
+    background-color: #6D214F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 90%; 
+  border-radius: 5px; 
+  margin-top: 4%;
+}
+.create h6{
+    font-size: 80%;
+    margin: 3%;
+    color: rgb(51, 255, 0);
+}
+.socigit{
+    color: brown;
+  
+    animation: sgit 2s ease-in 5s backwards;
+}
+@keyframes sgit{
+    from{transform: translateX(0);}
+    to{transform: translateX(150px);}
+}
+ .socifac{
+ 
+     /* animation-delay: 1s; */
+animation: sof 2s ease-out 5.5s backwards;
+} 
+@keyframes sof {
+   0%{opacity: 0;}
+   50%{opacity: 0;}
+   60%{transform: translateX(0);}
+   100%{transform: translateX(150px);}
+}
+.socilink {
+animation: socl 1s ease-out 7.5s backwards;
+}
+@keyframes socl {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+.fup{
+   position: absolute;
+   transform: rotateY(90deg);
+}
+
+/*flip animation */
+.first {
+    animation: firstdiv 2s linear both;
+}
+@keyframes firstdiv{
+    from{transform: rotateY(0);}
+    to{transform: rotateY(90deg);}
+}
+
+.second{
+    animation: seconddiv 2s linear 0.2s both;
+}
+@keyframes seconddiv{
+    from{transform: rotateY(90deg);}
+    to{transform: rotateY(0);}
+}
+
+
+
+
+/* mobile view */
+@media 
+  (min-device-width: 320px) 
+  and (max-device-width: 648px) {      
+
+    .forget{
+
+       font-size: 13px;
+    }
+
+    .social{
+    
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,150 @@
+.dasboarduperdiv{
+
+  padding-top: 1%;
+ overflow: hidden;
+ position: fixed;
+}
+.searchcont{
+  width: 100%;
+  position: relative;
+  
+}
+.inn{
+  position: absolute;
+  right: 0;
+}
+.searchInput{
+  height: 40px;
+  margin-right: 10px;
+ border-radius: 10px;
+}
+
+.inn input[type=text]{
+ border-color: transparent;
+ font-size: 25px;
+  background-color: #2ecc71;
+}
+.inn input:focus{
+  outline: none;
+}
+
+.inn input::placeholder{
+  color: rgb(15, 233, 149);
+  text-align: center;
+  font-style: italic;
+  font-size: 150%;
+}
+.searchButton{
+  margin-right: 10px;
+}
+.thomeouter{
+  
+  width: 100%;
+  background-color: #7f8c8d;
+  margin-top: 4%;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+ padding: 1% 3% 0 3%;
+ overflow: auto;
+}
+
+
+
+/* temp class */
+/* for box moving */
+.tempinnboxclas{
+  animation: boxmove  2s ease-out both;
+}
+@keyframes boxmove{
+  0%{transform: translateX(0), scaleX(1);}
+    
+    50%{transform: translateX(-130px) scaleX(0.8);}
+  100%{transform: translateX(-260PX) scaleX(1);}
+}
+/* for input manage */
+.tempinputclas {
+  animation: widthStrach  2s ease-out both;
+}
+@keyframes widthStrach{
+  from{width: 150px;}
+  to{width: 900px;}
+}
+/* for button manage */
+.tempButtonclas{
+  animation: buttonopacity  2s ease-out both;
+}
+@keyframes buttonopacity{
+  from{opacity: 0;}
+  to{opacity: 1;}
+  
+}
+/* global css end */
+
+
+
+
+
+
+
+
+
+/* laptop view */
+@media 
+  (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {      
+    .dasboarduperdiv{  
+     max-height: 680px;
+     margin-top: 72px;
+     
+    }
+}
+.thomeouter{
+  height:580px;
+  
+}
+
+
+
+
+ /* tablet view point */
+@media 
+  (min-device-width: 768px) 
+  and (max-device-width: 1280px) {      
+    .dasboarduperdiv{
+              height: 1020px;
+              
+    }
+    .thomeouter{
+      height: 965px;
+      border-radius: 0;
+      margin-top: 51px;
+     overflow: auto;
+    }
+    .searchcont{
+      visibility: hidden;
+    }
+
+   
+}
+
+
+
+
+/* mobile view */
+@media 
+  (min-device-width: 320px) 
+  and (max-device-width: 648px) {      
+
+    .dasboarduperdiv{
+       height: 650px;
+    }
+    .thomeouter{
+      margin-top: 35px;
+      height:600px;
+      border-radius: 0;
+    }
+     .searchcont{
+      visibility: hidden;
+    }
+}

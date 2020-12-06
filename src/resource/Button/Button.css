@@ -1,0 +1,33 @@
+.each{
+    border: none;
+    /* height: 40px;
+    width: 120px; */
+    border-radius: 20px;
+    /* font-size: 90%; */
+    font-family: 'Sansita Swashed', cursive;
+    transition: 1s;
+    transform: scale(1);
+}
+.each:focus{
+    outline: none;
+}
+.each:hover {
+    /* height: 45px;
+    width: 130px; */
+    transform: scale(1.3);
+}
+
+
+/* laptop view */
+@media 
+  (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {      
+    .each{
+     
+        height: 40px;
+        width: 120px;
+       
+        font-size: 100%;
+        
+    }
+}

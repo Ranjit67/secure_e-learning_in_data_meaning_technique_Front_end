@@ -1,0 +1,328 @@
+.Navbar{
+    width: 100%;
+    /* height: 72px; */
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    background-color: #22c7cd;
+    z-index: 200;
+    /* box-shadow: 5px 6px 7px 3px #888888; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    border-radius: 1%;
+ position: relative;
+ position: fixed;
+
+
+   top: 0;
+   left: 0;
+
+}
+
+.Home, .About{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 30px 10px 30px;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.Home:active, .About:active, .Home:hover,.About:hover{
+    border-bottom: 4px solid rgb(238, 238, 238);
+    font-size: 22px;
+    background-color: rgb(161, 224, 224);
+    color: black;
+}
+
+/* Search butoon and input besic css for md and sm */
+.navbarSearch{
+border: none;
+border-radius: 5px;
+background-color: #6ab04c;
+color: aliceblue;
+font-style: italic;
+font-size: 15px;
+font-family: 'Montserrat', sans-serif;
+box-sizing: border-box;
+}
+.navbarSearch:focus{
+  outline: none;
+}
+.navbarInput[type=text]{
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #b6e6e7;
+  font-style: italic;
+}
+.navbarInput:focus{
+  outline: none;
+  background-color: white;
+}
+
+/* Home shape global css */
+.navHousetemp{
+  color:#cf6a87 ;
+}
+.navDhaze{
+  color: white;
+}
+.navDhaze, .navHouse{  
+  position: absolute;
+  left: 2%;
+}
+
+/* laptop view */
+@media 
+  (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {      
+    .Navbar{
+      display: inline-flex;
+      height: 72px;
+    }
+    /* items not visibile for desktop */
+    .navbarsearchcont, .navDhaze , .navHouse,.navmodal, .navclose {
+      visibility: hidden;
+    }
+
+    /* cart and Avatar css for Desktop*/
+    .cartAvatar{
+      position: absolute;
+      height: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      padding-top: 25px;
+      right: 0;
+      margin-right: 60px;
+      /* background-color: red; */
+      width: 150px;
+    }
+.cartIco{
+      margin-top: 12px;
+      
+    }
+    /* .budger{
+      margin-top: 30px;
+    }  */
+   
+
+}
+
+
+
+ /* tablet view point */
+@media 
+  (min-device-width: 768px) 
+  and (max-device-width: 1280px) {      
+    .Navbar{
+              height: 60px;
+              
+    }
+
+    
+
+    .Home, .About,.cartAvatar{
+      visibility: hidden;
+  }
+  .cartAvatar, .About, .Home{
+    width: 0;
+    height: 0;
+  }
+  .navbarsearchcont{
+    left: 25%;
+    position: absolute;
+  }
+  .navHouse{
+    opacity: 0;
+  }
+  .navbarSearch{
+    margin-left: 10px;
+  }
+
+ /* Manubar animation */
+ .navDhazetemp{
+      
+  animation: animationDhaze 1s linear both;
+}
+@keyframes animationDhaze {
+  form{transform: rotate(0deg);}
+  to {transform: rotate(180deg);
+    z-index: -1;
+    opacity: 0;                 }
+}
+.secondnavDhazetemp{
+  animation: animationDhaze 1s linear both reverse;
+}
+
+.navHousetemp{
+  animation: animationHouse 0.5s linear 1s both;
+}
+@keyframes animationHouse {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+   /* input searcbutton animation */
+   .navbarSearch {
+    animation:navsearchButtonanimate 1s ease-in forwards ;
+  }
+  @keyframes navsearchButtonanimate {
+    0%{ transform: translateX(-120px);}
+    50%{transform: translateX(-60px);}
+    100%{transform: translateX(0);}
+    
+  }
+
+  /* for mobile model */
+/* modal */
+.navmodal{
+  top: 100%;
+  background-color: white;
+ position: absolute;
+  width: 50%;
+  height: 650px;
+  z-index: 300;
+  animation: navmodalanimate 1s ease-out both;
+}
+
+
+@keyframes navmodalanimate {
+  0%{transform: translateX(-50%);}
+  50%{transform: translateX(4%)}
+  100%{transform: translateX(0);}
+  
+}
+
+.navclose{
+ 
+  background-color: black;
+  opacity: 0.2;
+ position: absolute;
+  width: 100%;
+  height:3500%;
+  z-index: 250;
+}
+
+
+}
+
+
+
+/* mobile view */
+@media 
+  (min-device-width: 320px) 
+  and (max-device-width: 648px) {      
+
+    .Navbar{
+       
+       height: 40px;
+    }
+
+    .Home, .About,.cartAvatar{
+        visibility: hidden;
+    }
+    .cartAvatar, .About{
+      width: 0;
+      height: 0;
+    }
+    .navHouse{
+      opacity: 0;
+    }
+
+    .navbarInput{
+      width: 60%;
+    }
+    .navbarsearchcont{
+      left: 25%;
+    position: absolute;
+    }
+    
+    .navbarSearch{
+      margin-left: 10px;
+    }
+
+    /* Manubar animation */
+    .navDhazetemp{
+      
+      animation: animationDhaze 1s linear both;
+    }
+    @keyframes animationDhaze {
+      form{transform: rotate(0deg);}
+      to {transform: rotate(180deg);
+        z-index: -1;
+        opacity: 0;                 }
+    }
+    .secondnavDhazetemp{
+      animation: animationDhaze 0.5s linear both reverse;
+    }
+
+    .navHousetemp{
+      animation: animationHouse 0.5s linear 1s both;
+    }
+    @keyframes animationHouse {
+      from{opacity: 0;}
+      to{opacity: 1;}
+    }
+
+
+
+   /* input searcbutton animation */
+   .navbarSearch {
+    animation:navsearchButtonanimate 1s ease-in forwards ;
+  }
+  @keyframes navsearchButtonanimate {
+    0%{ transform: translateX(-120px);}
+    50%{transform: translateX(-60px);}
+    100%{transform: translateX(0);}
+    
+  }
+
+    .tempSearchCont{
+      animation: tempSearchButton 1s ease-in forwards;
+    }
+@keyframes tempSearchButton {
+  from{transform: translateX(0);}
+  to{transform: translateX(-18%);}
+  
+}
+
+/* for mobile model */
+/* modal */
+.navmodal{
+  top: 100%;
+  background-color: white;
+ position: absolute;
+  width: 40%;
+  height: 350px;
+  z-index: 300;
+  animation: navmodalanimate 1s ease-out both;
+}
+@keyframes navmodalanimate {
+  0%{transform: translateX(-50%);}
+  50%{transform: translateX(4%)}
+  100%{transform: translateX(0);}
+  
+}
+
+.navclose{
+ 
+  background-color: black;
+  opacity: 0.2;
+ position: absolute;
+  width: 100%;
+  height:3400%;
+  z-index: 250;
+}
+    
+}
+
+
+
+
+
