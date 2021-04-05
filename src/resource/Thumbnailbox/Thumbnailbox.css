@@ -7,11 +7,11 @@
     .thomnelImage{
         width: 140px;
       height: 140px;
-      background-color: red;
+      
       box-sizing: border-box;
       border-radius: 10px;
+     position: relative;
      
-      
     }
 
     .thamnailCont{
